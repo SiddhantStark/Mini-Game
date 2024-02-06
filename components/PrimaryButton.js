@@ -3,9 +3,9 @@ import React from 'react'
 
 export default function PrimaryButton({children, onEnter}) {
   
-  function pressHandler(){
-    console.log('Pressed');
-  }
+  // function pressHandler(){
+  //   console.log('Pressed');
+  // }
 
   return (
     <View style={styles.buttonOuterContainer}>

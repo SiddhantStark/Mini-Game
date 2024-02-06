@@ -3,7 +3,7 @@ import React from 'react';
 import { useState } from 'react';
 import PrimaryButton from '../components/PrimaryButton';
 
-export default function StartScreen() {
+export default function StartScreen({onPickNumber}) {
 
   const [enteredNumber, setEnteredNumber] = useState('');
 
@@ -20,8 +20,11 @@ export default function StartScreen() {
      if(isNaN(chosenNumber) || chosenNumber<=0 || chosenNumber>99){
        Alert.alert('Invalid Number',
         'The number has to be between 1 and 99',
-        [{text: 'Okay', style: 'destructive', onPress: resetInput}])
-     }
+        [{text: 'Okay', style: 'destructive', onPress: resetInput}]
+      );
+      return;
+    }
+    onPickNumber(chosenNumber);
   }
    
   return (

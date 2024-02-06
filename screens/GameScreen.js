@@ -9,4 +9,6 @@ export default function GameScreen() {
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+
+})
